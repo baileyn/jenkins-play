@@ -6,15 +6,3 @@ services:
       - 8080:8080
       - 50000:50000
     restart: always
-  gitlab:
-    image: gitlab/gitlab-ce:14.10.2-ce.0
-    ports:
-      - '80:80'
-      - '443:443'
-      - '22:22'
-    volumes:
-      - '$GITLAB_HOME/config:/etc/gitlab'
-      - '$GITLAB_HOME/logs:/var/log/gitlab'
-      - '$GITLAB_HOME/data:/var/opt/gitlab'
-    shm_size: '256m'
-    restart: always
